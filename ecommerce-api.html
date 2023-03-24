@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/ecommerce-api.css" />
+    <title>E-commerce APIs Introduction</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>E-commerce APIs Introduction</header>
+        <ul> 
+          <li><a class="nav-link" href="#What_are_E-commerce_APIs">What are E-commerce APIs</a></li>
+          <li><a class="nav-link" href="#Benefits_of_E-commerce_APIs">Benefits of E-commerce APIs</a></li>
+          <li><a class="nav-link" href="#Three_Types_of_API-led_Models">Three Types of API-led Models</a></li>
+          <li><a class="nav-link" href="#How_Do_E-commerce_APIs_Work">How Do E-commerce APIs Work</a></li>
+          <li><a class="nav-link" href="#Different_Types_of_E-commerce_APIs">Different Types of E-commerce APIs</a></li>
+          <li><a class="nav-link" href="#Wrapping_Up">Wrapping Up</a></li>
+          <li><a class="nav-link" href="#Reference">Reference</a></li>
+        </ul>
+    </nav>
+    <main id="main-doc">
+      <section class="main-section" id="What_are_E-commerce_APIs">
+        <header>What are E-commerce APIs</header>
+        <article> 
+          <p>API stands for Application Programming Interface, which is a set of guidelines, protocols, and tools that enable different software applications to communicate with each other. APIs define how different software components interact and exchange data, typically using a standardized set of programming interfaces or methods.</p>
+          <p>E-commerce APIs are a set of tools, protocols, and routines that enable different applications and systems to communicate and exchange data with e-commerce platforms. APIs provide a standardized way for different systems to communicate with e-commerce platforms and enable developers to access and manipulate data stored within e-commerce platforms, such as product information, customer data, and order details.</p>
+        </article>   
+      </section>
+      <section class="main-section" id="Benefits_of_E-commerce_APIs">
+        <header>Benefits of E-commerce APIs</header>
+        <article>
+            <p>APIs provide numerous benefits for e-commerce services and make it easier for businesses to integrate with external systems and applications. These benefits include:</p>
+          <ul>
+          <li><b>Reusability</b>: APIs allow developers to reuse code and functionality across applications and platforms, reducing development time and costs.</li>
+          <li><b>Scalability</b>: e-commerce APIs can handle a high volume of requests and transactions, making them scalable for use in large-scale applications.</li>
+          <li><b>Extensibility</b>: e-commerce APIs can be used to extend the functionality of an e-commerce platform, allowing developers to add new features and capabilities to an existing system to enhance user experiences.</li>
+          <li><b>Integration</b>: e-commerce APIs can be used to integrate with other systems and applications, such as payment gateways, shipping carriers, and inventory management systems. This can help to streamline operations, improve efficiency, and reduce errors.</li>
+          <li><b>Customization & Innovation</b>: APIs can be used to customize the user experience by providing access to specific data or functionality. This allows developers to tailor the e-commerce platform to the specific needs of their business or customers. Moreover, APIs can enable businesses to create new products and services by combining the functionalities of different systems and platforms.</li>
+          </ul>
+        </article>   
+      </section>
+      <section class="main-section" id="Three_Types_of_API-led_Models">
+        <header>Three Types of API-led Models</header>
+        <article> 
+            <p>API-led connectivity is an approach to connecting assets using reusable API building blocks. It involves three layers of reusable APIs: </p>
+          <h4>Systems APIs</h4>
+          <p>System APIs form the foundation layer of the three-layer API-led connectivity architecture, and provide a way to access core systems such as FTP servers, ERP, CRM, or legacy systems without requiring knowledge of their complexities. These APIs are crucial in connecting users to core systems and exposing legacy systems, and enable developers to reuse APIs across multiple projects. Security is a top priority at this layer, as system APIs provide direct access to sensitive data. Access management is essential to lower security friction and control how users can access data. In an e-commerce context, system APIs can enhance a site's functionality and improve customer experience.</p>
+          <p>An e-commerce platform uses a system API to extract real-time inventory data from a legacy inventory management system. This data is displayed on the platform's website to show customers product availability and is also used to update inventory levels automatically when orders are placed. By providing direct access to the inventory management system through a system API, the platform improves its functionality and enhances the customer experience.</p>
+
+          <h4>Process APIs</h4>
+          <p>Process APIs are designed to reflect the structure of an organization's processes, breaking down data silos by orchestrating different data objects generated by system APIs.</p>
+          <p>Let's say an e-commerce platform receives orders through various channels, such as its website, mobile app, and social media pages. To fulfill these orders, the platform needs to communicate with different systems, such as its inventory management and shipping systems. By using a process API, the e-commerce platform can encapsulate the business logic processes required to fulfill an order, without relying on the source or target systems. For example, the process API could be designed to check inventory levels, allocate stock, and generate a shipping label. The API could then communicate with the already-present system APIs for inventory management and shipping to execute these actions. It also enables the platform to expand its infrastructure and add new systems without disrupting its existing processes.</p>
+
+          <h4>Experience APIs</h4>
+          <p>Experience APIs enable data to be shared across channels and reconfigured to suit each channel's specific needs, without requiring separate integrations for each. This allows for the same data to be presented in multiple formats based on users' requirements, creating a common data source for each channel. </p>
+          <p>For instance, an e-commerce platform that serves customers through various channels, such as a website, mobile app, and social media, may require different product information display based on each channel's requirements. Using experience APIs, you can configure data to suit each channel's specific needs, such as formatting and image sizes. This not only saves time and effort but also ensures consistency across all channels.</p>
+          <figure>
+          <img src="https://docs.mulesoft.com/general/_images/api-led-architecture.png" alt="API-led Connectivity">
+          <figcaption>Image Source: <a href="https://www.mulesoft.com/" target="_blank">MuleSoft</a></figcaption>
+          </figure>
+        </article>   
+      </section>
+      <section class="main-section" id="How_Do_E-commerce_APIs_Work">
+        <header>How Do E-commerce APIs Work</header>
+        <article> <p>E-commerce websites require handling a large volume of requests, responses, and logic, making APIs an essential tool for their smooth functioning. APIs for e-commerce are typically based on REST architecture, which uses HTTP request methods to access server information.</p>
+
+<p>REST APIs are simple to implement and use a lightweight URL, which allows developers to access a website's data using search and query tools. They also offer support for OAuth 2.0 authentication for added security and compatibility with a wide range of programming languages.</p>
+
+<p>To integrate e-commerce APIs into a website, developers need to be familiar with several key components:</p>
+
+<ul>
+
+<li><b>Resources</b>: These objects determine the relationship to other resources and methods that operate on them.</li>
+
+<li><b>Endpoints</b>: These are the touchpoints where APIs interact with other systems.</li>
+
+<li><b>HTTP Methods</b>: These are the allowed interactions, including GET for retrieving resources, POST for creating resources, and PUT for changing or replacing resources.</li>
+
+<li><b>Parameters</b>: These are criteria that determine the type of action you want to take on a resource and include a name, value type, and description.</li>
+
+<li><b>Sample Request and Response Objects</b>: These identify the inputs and outputs of a resource.</li>
+
+</ul>
+
+<p>By utilizing these components, developers can integrate e-commerce APIs into their website and improve their functionality, resulting in a better customer experience.</p>
+
+<p>A sample demonstrates how to use a REST API with Python to retrieve product information from an e-commerce website:</p>
+
+Define the URL endpoint for the product information API
+
+<code>import requests
+url = "[https://api.ecommercewebsite.com/products](https://api.ecommercewebsite.com/products)"</code>
+
+Define the parameters for the API request
+
+<code>params = {
+"category": "electronics",
+"sort_by": "price",
+"order": "asc"
+}</code>
+
+Make a GET request to the API endpoint with the parameters
+
+<code>response = requests.get(url, params=params)</code>
+
+Check the status code of the response - If the request is successful (status code 200), we can access the response data in JSON format and print out the name and price of each product.
+
+<code>if response.status_code == 200:
+	products = response.json()["products"]
+	for product in products:
+	print(f"{product['name']}: ${product['price']}")</code>
+
+If the request is not successful, we print out an error message with the status code.
+
+<code>else: 
+print(f"Error: {response.status_code}")</code>
+        </article>   
+      </section>
+      <section class="main-section" id="Different_Types_of_E-commerce_APIs">
+        <header>Different Types of E-commerce APIs</header>
+        <article> 
+        <p>By integrating various API functionality into e-commerce platforms, developers can streamline order fulfillment, shipping, delivery, and other critical processes. With hundreds of e-commerce APIs available for a wide range of tasks, developers have access to a vast ecosystem of tools to create the best possible e-commerce experiences for customers. Here are some examples:</p>
+
+        <h4>Login APIs</h4>
+        <p>Login APIs are used to authenticate users and grant them access to specific parts of an e-commerce site. With a login API, users can sign in to their account and access their order history, saved payment methods, and other personalized information. Developers can also use login APIs to implement multi-factor authentication or integrate with third-party authentication services like Google or Facebook.</p>
+        <ul>
+        <li><a href="[https://developers.google.com/identity/sign-in/web/sign-in](https://developers.google.com/identity/sign-in/web/sign-in)" target="_blank">Integrating Google Sign-In into your web app</a></li>
+
+        <li><a href="[https://developers.facebook.com/docs/facebook-login/web/](https://developers.facebook.com/docs/facebook-login/web/)" target="_blank">Facebook Login for the Web with the JavaScript SDK</a></li>
+
+        <li><a href="[https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow](https://learn.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-auth-code-flow)" target="_blank">Microsoft identity platform and OAuth 2.0 authorization code flow</a></li>
+
+        </ul>
+
+        <h4>Product Information APIs</h4>
+
+        <p>These APIs enable you to access product information such as product titles, descriptions, prices, and images. Examples of product information APIs include: </p>
+
+        <ul>
+
+        <li><a href="[https://webservices.amazon.com/paapi5/documentation/](https://webservices.amazon.com/paapi5/documentation/)" target="_blank">Amazon Product Advertising API</a></li>
+
+        <li><a href="[https://developer.walmart.com/home/us-mp/](https://developer.walmart.com/home/us-mp/)" target="_blank">Walmart Marketplace API</a></li>
+
+        <li><a href="[https://developer.etsy.com/documentation/](https://developer.etsy.com/documentation/)" target="_blank">Etsy API</a></li>
+
+        </ul>
+
+        <h4>Inventory Management APIs</h4>
+
+        <p>Inventory management APIs allow you to manage inventory levels, track stock levels, and receive alerts when stock levels fall below a certain threshold. Examples of inventory management APIs include <a href="[https://developer.intuit.com/app/developer/qbo/docs/develop](https://developer.intuit.com/app/developer/qbo/docs/develop)" target="_blank">QuickBooks</a> and <a href="[https://www.zoho.com/inventory/api/v1/introduction/#overview](https://www.zoho.com/inventory/api/v1/introduction/#overview)" target="_blank">Zoho Inventory</a>.</p>
+
+        <h4>Sales Tax APIs</h4>
+
+        <p>Sales tax APIs are used to calculate the sales tax for a transaction based on the customer's location and the products being sold. These APIs integrate with tax databases to ensure accurate tax calculations and can be customized to support different tax rates for different regions or product categories. Sales tax APIs can help e-commerce businesses comply with tax laws and regulations and reduce the risk of errors in tax calculations. <a href=”[https://www.avalara.com/us/en/products/integrations/avalara-api.html](https://www.avalara.com/us/en/products/integrations/avalara-api.html)” target=_blank>Avalara API</a> and <a href=”[https://www.taxjar.com/product/api](https://www.taxjar.com/product/api)” target=_blank>TaxJar Sales Tax API</a> are two examples.</p>
+
+        <h4>Payment Gateways APIs</h4>
+
+        <p>These APIs allow you to securely accept online payments through credit cards, digital wallets, and other payment methods. Examples of payment gateway APIs include</p>
+
+        <ul>
+
+        <li><a href="[https://developer.paypal.com/api/rest/](https://developer.paypal.com/api/rest/)" target="_blank">PayPal</a> is one of the earliest and most well-known payment gateways. It allows merchants to accept payments through PayPal accounts, credit cards, and debit cards. PayPal also offers fraud protection, chargeback protection, and seller protection.</li>
+
+        <li><a href="[https://stripe.com/docs](https://stripe.com/docs)" target="_blank">Stripe</a> provides an integrated payment infrastructure for businesses of all sizes. Stripe supports a range of payment methods including credit and debit cards, digital wallets like Apple Pay and Google Pay, and local payment methods from around the world.</li> 
+
+        <li><a href="[https://developer.squareup.com/us/en](https://developer.squareup.com/us/en)" target="_blank">Square</a> provides payment processing, point-of-sale hardware, and related software services. Square enables businesses to accept payments through their mobile devices or in-store. Square also offers additional services such as inventory management, payroll, and marketing tools.</li> 
+
+        <li><a href="[https://developer.authorize.net/api.html](https://developer.authorize.net/api.html)" target="_blank">Authorize.net</a> is a payment gateway that offers a suite of payment management tools including payment processing, fraud detection, and invoicing. It supports a variety of payment methods including credit cards, PayPal, and e-checks. [Authorize.net](http://authorize.net/) also offers tools for subscription billing, recurring payments, and customer information management.</li> 
+
+        </ul>
+
+        <h4>Shipping APIs</h4>
+
+        Shipping APIs allow you to calculate shipping rates, print shipping labels, and track shipments. Examples of shipping APIs include: 
+
+        <ul>
+
+        <li><a href="[https://www.ups.com/upsdeveloperkit?loc=en_US](https://www.ups.com/upsdeveloperkit?loc=en_US)" target="_blank">UPS</a> is a popular shipping carrier that offers a variety of shipping services such as ground shipping, air shipping, and international shipping.</li>
+
+        <li><a href="[https://www.fedex.com/en-us/developer.html](https://www.fedex.com/en-us/developer.html)" target="_blank">FedEx</a> offers a variety of shipping services, including ground shipping, air shipping, and international shipping.</li>
+
+        <li><a href="[https://developer.dhl.com/](https://developer.dhl.com/)" target="_blank">DHL</a> is a global shipping carrier that provides air and sea freight services, as well as express shipping and logistics solutions.</li>
+
+        <li><a href="[https://www.usps.com/business/web-tools-apis/documentation-updates.htm](https://www.usps.com/business/web-tools-apis/documentation-updates.htm)" target="_blank">USPS</a> is a government-operated shipping carrier in the United States that provides a wide range of shipping services, including domestic and international shipping, priority mail, and express mail.</li>
+        </ul>
+        </article>   
+      </section>
+      <section class="main-section" id="Wrapping_Up">
+        <header>Wrapping Up</header>
+        <article>
+          <p>E-commerce APIs are essential for the smooth and efficient functioning of online stores. With the help of these APIs, developers can easily integrate various functionalities. Different E-commerce APIs offer various features and benefits, and it is important to choose the one that fits the specific needs of the online store. </p>
+          <p>Overall, E-commerce APIs play a crucial role in providing a seamless and efficient shopping experience for customers while also enabling online store owners to manage their business operations effectively. Here are more e-commerce APIs for you to discover - <a href="[https://rapidapi.com/category/eCommerce](https://rapidapi.com/category/eCommerce)" target="_blank">eCommerce APIs</a> from rapidapi.</p>
+        </article>   
+      </section>
+      <section class="main-section" id="Reference">
+        <header>Reference</header>
+        <article> 
+          <ul>
+            <li><a href="[https://www.bigcommerce.com/articles/ecommerce-website-development/api-guide/](https://www.bigcommerce.com/articles/ecommerce-website-development/api-guide/)" target="_blank">Understanding Ecommerce APIs and the Role They Play in Your Tech Stack</a>, bigcommerce</li>
+
+            <li><a href="[https://www.freecodecamp.org/news/a-guide-to-ecommerce-apis/](https://www.freecodecamp.org/news/a-guide-to-ecommerce-apis/)" target="_blank">E-commerce APIs Explained – An Overview of API Integration and its Benefits</a>, freecodecamp</li>
+
+            <li><a href="[https://cloudinary.com/guides/e-commerce-platform/ecommerce-apis-6-types-of-apis-and-their-business-benefits](https://cloudinary.com/guides/e-commerce-platform/ecommerce-apis-6-types-of-apis-and-their-business-benefits)" target="_blank">eCommerce APIs: 6 Types of APIs and Their Business Benefits</a>, cloudinary</li>
+            </ul>
+        </article>   
+      </section>
+    </main>
+  </body>
+</html>
